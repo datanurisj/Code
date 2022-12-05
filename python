@@ -1,2 +1,16 @@
 import sys
 import os
+
+
+# os.path
+for dirname, _, filenames in os.walk(path):
+  for filename in filenames:
+    print(os.path.join(dirname, filename))
+    
+
+# read_csv
+test = pd.read_csv(path)
+
+
+# columns check
+# test.columns, value_counts, 
