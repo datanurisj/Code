@@ -21,3 +21,7 @@ test = pd.read_csv(path)
 # NA값 삭제, 추가
 test.dropna(how='any', axis=0)
 test.fillna(1)
+
+
+# 시리즈의 타입 변경
+test['PassengerId'] = test['PassengerId'].astype('int')
