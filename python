@@ -15,4 +15,4 @@ test = pd.read_csv(path)
 
 
 # columns check
-# test.columns, value_counts, 
+# test.columns, value_counts, describe
