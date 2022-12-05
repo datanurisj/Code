@@ -25,3 +25,7 @@ test.fillna(1)
 
 # 시리즈의 타입 변경
 test['PassengerId'] = test['PassengerId'].astype('int')
+
+
+# OPEN CV 라이브러리 활용
+import cv2
