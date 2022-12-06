@@ -29,3 +29,7 @@ test['PassengerId'] = test['PassengerId'].astype('int')
 
 # OPEN CV 라이브러리 활용
 import cv2
+
+
+# 숫자 받기
+a,b,c = map(int, input().split())
