@@ -70,6 +70,16 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 
+# 한글 우회 방법
+from PIL import ImageFont, ImageDraw, Image
+
+def myPutText(src, text, pos, font_size, font_color):
+    img_pil = Image.fromarray(src)
+    draw = ImageDraw.Draw(img_pil)
+    font = ImageFont.truetype("fonts/gulim.ttc", font_size)
+    draw.text(pos, text, font=font, fill=font_color)
+    return np.array(img_pil)
+
 
 # 숫자 받기
 a,b,c = map(int, input().split())
