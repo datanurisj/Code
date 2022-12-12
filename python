@@ -106,3 +106,13 @@ for i in range(0, r):
             count +=1
 
 print(count)
+
+
+# h(Hz), b(bit), c(Channel), s(Second), 필요한 공간 계산
+h, b, c, s = map(int, input().split())
+
+result = h*b*c*s
+res1 = result / 8 # bit
+res2 = res1 / 1024 # KB
+res3 = res2 / 1024 # MB
+print(round(res3, 1), 'MB')
