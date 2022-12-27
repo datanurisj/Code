@@ -74,3 +74,14 @@ res1 = result / 8 # bit
 res2 = res1 / 1024 # KB
 res3 = res2 / 1024 # MB
 print(round(res3, 1), 'MB')
+
+
+# 재귀함수
+def function(n):
+    if n == 0:
+        return
+    else:
+        print(n)
+        function(n-1)
+    
+function(3)
