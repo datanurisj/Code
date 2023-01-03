@@ -97,3 +97,18 @@ for i in range(10):
         a.append(line)
 
 a = [[0 for j in range(10)] for i in range(10)]
+
+
+
+vin = []        # 빈 리스트 만들기
+
+for i in range(10):
+    vin.append([])      # 리스트 안에 다른 리스트 추가
+    for j in range(10):
+        vin[i].append(0)    # 리스트 안에 들어있는 리스트 안에 0 추가
+
+
+for i in range(10):
+    for j in range(10):
+        print(vin[i][j], end='')    # 공백을 두고 한 줄로 출력
+    print()     # 줄바꿈
