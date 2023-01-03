@@ -112,3 +112,8 @@ for i in range(10):
     for j in range(10):
         print(vin[i][j], end='')    # 공백을 두고 한 줄로 출력
     print()     # 줄바꿈
+
+
+# 인코딩
+encoding = "utf-8" # euc-kr, default 값 설정
+encoding = "cp949" # 한글이 깨질경우 사용
