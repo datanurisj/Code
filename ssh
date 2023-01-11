@@ -1,0 +1,24 @@
+# ssh 192.168.2.115 접속
+cli = paramiko.SSHClient()
+cli.set_missing_host_key_policy(paramiko.AutoAddPolicy)
+
+server = input("Server: ")  # 호스트명 or IP 주소
+user = input("Username: ")  
+pwd = getpass.getpass("Password: ") # 암호입력 숨김
+
+cli.connect(server, port=22, username=user, password=pwd)
+# 새로운 interactive shell session 생성
+channel = cli.invoke_shell()
+
+# 명령 송신
+channel.send("cd /\n")
+channel.send("cd ㅇㅇㅇ/ㅇㅇㅇ/ㅇㅇㅇ/\n")
+channel.send("ls -al\n")
+channel.send("pwd\n")
+time.sleep(1.0)
+
+# 결과 수신
+output = channel.recv(65535).decode("utf-8")
+print(output)
+
+cli.close() # ssh 연결 닫기
