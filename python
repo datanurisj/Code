@@ -13,6 +13,7 @@ for dirname, _, filenames in os.walk(path):
 # read_csv
 test = pd.read_csv(path)
 
+
 # list to Dataframe
 import pandas as pd
 ex_list = ['title', 'id', 'color']
