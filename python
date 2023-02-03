@@ -41,6 +41,12 @@ df4 = pd.DataFrame.from_dict([{'col_1': 1, 'col_2':2}])
 test.dropna(how='any', axis=0)
 test.fillna(1)
 
+# 데이터프레임 행 초기화
+df.reset_index(drop=True) # drop=True를 하지 않으면 행이 그대로 남아있음
+
+# 데이터프레임 원하는 열 추출
+df[['A','B']]
+
 
 # 시리즈의 타입 변경
 test['PassengerId'] = test['PassengerId'].astype('int')
