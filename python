@@ -56,6 +56,7 @@ test['PassengerId'] = test['PassengerId'].astype('int')
 # re
 re.sub(pattern, replacement, str) # str 에서 pattern과 일치하는 내용을 replacement로 변경
 re.split(' ', test) # test에서 ' ' 안의 내용으로 split
+re.search(r'\\', s) # 원시 문자열(raw string)을 사용해 <regex>를 지정
 
 
 # 한글 우회 방법
