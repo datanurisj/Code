@@ -2,6 +2,7 @@ import sys
 import os
 import pandas as pd
 import numpy as np
+import re
 
 
 # os.path
@@ -51,6 +52,10 @@ df[['A','B']]
 # 시리즈의 타입 변경
 test['PassengerId'] = test['PassengerId'].astype('int')
 
+
+# re
+re.sub(pattern, replacement, str) # str 에서 pattern과 일치하는 내용을 replacement로 변경
+re.split(' ', test) # test에서 ' ' 안의 내용으로 split
 
 
 # 한글 우회 방법
