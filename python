@@ -48,6 +48,11 @@ df.reset_index(drop=True) # drop=True를 하지 않으면 행이 그대로 남�
 # 데이터프레임 원하는 열 추출
 df[['A','B']]
 
+# df 인덱스 초기화
+DataFrame.set_index(column, drop=True, append=False, inplace=False)
+#drop : 기존 칼럼을 index로 넣을 시 기존 칼럼을 버릴지 여부
+#append : 기존 인덱스에 내가 원하는 칼럼까지 추가해서 인덱스 생성 여부
+#inplace : 원본 데이터에 덮어씌기 여부
 
 # 시리즈의 타입 변경
 test['PassengerId'] = test['PassengerId'].astype('int')
