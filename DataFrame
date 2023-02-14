@@ -6,3 +6,16 @@ df['new'] = list
 
 # 자주 사용하는 df 라이브러리
 merge, apply(lambda), re.sub
+
+
+# dict to Dataframe
+#new_df = pd.DataFrame(name_size_dict, index=[0])
+#vin = pd.DataFrame(columns=['title', 'byteSize'])
+
+#title = pd.Series(name_size_dict.keys())
+#byteSize = pd.Series(name_size_dict.values())
+#r_df = pd.DataFrame(r_data, index=[0])
+#vin2 = pd.DataFrame(columns=['t_title', 'e_title'])
+
+#t_title = pd.Series(r_data.keys())
+#e_title = pd.Series(r_data.values())
