@@ -21,3 +21,10 @@ merge(), apply(lambda), re.sub()
 
 #t_title = pd.Series(r_data.keys())
 #e_title = pd.Series(r_data.values())
+
+
+# Series to string
+pr_nm = Pr_Nm.to_string()   # series -> string 으로 변경
+pr_nm = re.sub(r'\\', '', Pr_Nm)    # 이건가?
+pr_nm = re.sub('n', ' ', Pr_Nm)
+pr_nm = re.sub('\n', ' ', Pr_Nm)
