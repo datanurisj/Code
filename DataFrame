@@ -6,6 +6,8 @@ df['new'] = list
 
 # 자주 사용하는 df 라이브러리
 merge, apply(lambda), re.sub
+# DataFrame에서는 for문이나 while문은 지양
+# 너무 오래걸리고 터질 가능성 O, 판다스 라이브러리 지향
 
 
 # dict to Dataframe
