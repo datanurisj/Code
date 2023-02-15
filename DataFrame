@@ -28,3 +28,43 @@ pr_nm = Pr_Nm.to_string()   # series -> string 으로 변경
 pr_nm = re.sub(r'\\', '', Pr_Nm)    # 이건가?
 pr_nm = re.sub('n', ' ', Pr_Nm)
 pr_nm = re.sub('\n', ' ', Pr_Nm)
+
+
+# list to Dataframe
+import pandas as pd
+ex_list = ['title', 'id', 'color']
+df = pd.Dataframe(ex_list) # columns=['','']
+
+
+# Dict to DataFrame
+test = pd.DataFrame(dict)
+
+1) pass an index
+df = pd.DataFrame({'col_1': 1, 'col_2': 2}, index = [0])
+2) use a list instead of scalar values
+df2 = pd.DataFrame({'col_1'}:[1], 'col_2':[2]})
+3) use pd.DataFrame.from_records() with a list
+df3 = pd.DataFrame.from_records([{'col_1':1, 'col_2':2}])
+4) use pd.DataFrame.from_dict([]) with a list
+df4 = pd.DataFrame.from_dict([{'col_1': 1, 'col_2':2}])
+
+
+# 데이터프레임 행 초기화
+df.reset_index(drop=True) # drop=True를 하지 않으면 행이 그대로 남아있음
+
+# 데이터프레임 원하는 열 추출
+df[['A','B']]
+
+
+# df 인덱스 초기화
+DataFrame.set_index(column, drop=True, append=False, inplace=False)
+# drop : 기존 칼럼을 index로 넣을 시 기존 칼럼을 버릴지 여부
+# append : 기존 인덱스에 내가 원하는 칼럼까지 추가해서 인덱스 생성 여부
+# inplace : 원본 데이터에 덮어씌기 여부
+
+# 시리즈의 타입 변경
+test['PassengerId'] = test['PassengerId'].astype('int')
+
+# NA값 삭제, 추가
+test.dropna(how='any', axis=0)
+test.fillna(1)
