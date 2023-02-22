@@ -15,6 +15,11 @@ for dirname, _, filenames in os.walk(path):
 test = pd.read_csv(path)
 
 
+# 인코딩
+encoding = "utf-8" # euc-kr, default 값 설정
+encoding = "cp949" # 한글이 깨질경우 사용
+
+
 # columns check
 # test.columns, value_counts, describe
 
@@ -114,7 +119,3 @@ for i in range(10):
         print(vin[i][j], end='')    # 공백을 두고 한 줄로 출력
     print()     # 줄바꿈
 
-
-# 인코딩
-encoding = "utf-8" # euc-kr, default 값 설정
-encoding = "cp949" # 한글이 깨질경우 사용
