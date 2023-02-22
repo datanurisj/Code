@@ -31,6 +31,10 @@ result = ' '.join(s for s in 리스트)
 result = ' '.join(mpa(str, 리스트))
 
 
+# 숫자 받기
+a,b,c = map(int, input().split())
+
+
 # 한글 우회 방법
 from PIL import ImageFont, ImageDraw, Image
 
@@ -41,9 +45,6 @@ def myPutText(src, text, pos, font_size, font_color):
     draw.text(pos, text, font=font, fill=font_color)
     return np.array(img_pil)
 
-
-# 숫자 받기
-a,b,c = map(int, input().split())
 
 
 # 16 진수 구구단 출력
