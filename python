@@ -35,6 +35,13 @@ result = ' '.join(mpa(str, 리스트))
 a,b,c = map(int, input().split())
 
 
+# shutil 라이브러리, 경로간 파일 복사
+import shutil
+shutil.copyfile(src, dst, *, follow_symlinks=True) # src와 dst의 파일 이름 동일시 SameFileError 발생
+shutil.copy(src, dst, *, follow_symlinks=True)     # metadata 정보는 불가
+shutil.copy2                                       # 
+
+
 # 한글 우회 방법
 from PIL import ImageFont, ImageDraw, Image
 
