@@ -30,6 +30,7 @@ re.search(r'\\', s) # 원시 문자열(raw string)을 사용해 <regex>를 지�
 result = ' '.join(s for s in 리스트)
 result = ' '.join(mpa(str, 리스트))
 
+
 # 한글 우회 방법
 from PIL import ImageFont, ImageDraw, Image
 
