@@ -20,10 +20,6 @@ encoding = "utf-8" # euc-kr, default 값 설정
 encoding = "cp949" # 한글이 깨질경우 사용
 
 
-# columns check
-# test.columns, value_counts, describe
-
-
 # re
 re.sub(pattern, replacement, str) # str 에서 pattern과 일치하는 내용을 replacement로 변경
 re.split(' ', test) # test에서 ' ' 안의 내용으로 split
