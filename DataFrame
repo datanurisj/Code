@@ -70,3 +70,6 @@ test['PassengerId'] = test['PassengerId'].astype('int')
 # NA값 삭제, 추가
 test.dropna(how='any', axis=0)
 test.fillna(1)
+
+# columns check
+# test.columns, value_counts, describe
