@@ -12,7 +12,7 @@ merge(), apply(lambda), re.sub()
 # 너무 오래걸리고 터질 가능성 O, 판다스 라이브러리 지향
 
 
-# 데이터프레임 변환
+# JSON데이터 -> 데이터프레임 변환
 from pandas import json_normalize
 json_normalize
 
