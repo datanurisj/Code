@@ -11,6 +11,9 @@ merge(), apply(lambda), re.sub()
 # DataFrame에서는 for문이나 while문은 지양
 # 너무 오래걸리고 터질 가능성 O, 판다스 라이브러리 지향
 
+# 데이터프레임 변환
+from pandas import json_normalize
+json_normalize
 
 # dict to Dataframe
 #new_df = pd.DataFrame(name_size_dict, index=[0])
