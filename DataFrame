@@ -60,7 +60,7 @@ df4 = pd.DataFrame.from_dict([{'col_1': 1, 'col_2':2}])
 df.reset_index(drop=True) # drop=True를 하지 않으면 행이 그대로 남아있음
 
 # 데이터프레임 행 합치기
-pd.concat([대상1, 대상2], axis=0)
+pd.concat([대상1, 대상2], ignore_index=True)
 
 # 데이터프레임 원하는 열 추출
 df[['A','B']]
