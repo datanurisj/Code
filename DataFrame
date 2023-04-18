@@ -38,6 +38,11 @@ pr_nm = re.sub('n', ' ', Pr_Nm)
 pr_nm = re.sub('\n', ' ', Pr_Nm)
 
 
+# Series to list
+a = pd.Series([1,2,3])
+a.tolist()
+
+
 # list to Dataframe
 import pandas as pd
 ex_list = ['title', 'id', 'color']
