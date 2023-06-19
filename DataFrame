@@ -49,6 +49,17 @@ ex_list = ['title', 'id', 'color']
 df = pd.Dataframe(ex_list) # columns=['','']
 
 
+# list to csv
+import csv
+
+def list_to_csv(data, filename):
+    with open(filename, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerows(data)
+
+list_to_csv(data(words), filename('test.csv'))
+
+
 # list to array
 import numpy as np
 
