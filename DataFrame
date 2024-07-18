@@ -20,6 +20,9 @@ json_normalize
 # df.to_excel    # 데이터프레임을 엑셀로 저장
 df.to_excel("경로설정\\파일이름.xlsx")
 
+# df.to_csv        # 데이터 프레임을 csv로 저장
+df.to_csv("경로설정//파일이름.csv")
+
 # dict to Dataframe
 new_df = pd.DataFrame(name_size_dict, index=[0])
 vin = pd.DataFrame(columns=['title', 'byteSize'])
