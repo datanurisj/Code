@@ -134,3 +134,17 @@ for i in range(10):
         print(vin[i][j], end='')    # 공백을 두고 한 줄로 출력
     print()     # 줄바꿈
 
+
+# str 데이터의 주차 구하기
+import datetime
+data = '2022-12-23'
+
+def get_week_num(data) -> int:
+    temp_data = data.split('-')
+    text = datetime.date(
+        year = int(temp_data[0]),
+        month = int(temp_data[1]),
+        day = int(temp_data[2])).strftime('%V')
+    return text
+
+get_week_num(data_
