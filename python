@@ -147,4 +147,17 @@ def get_week_num(data) -> int:
         day = int(temp_data[2])).strftime('%V')
     return text
 
-get_week_num(data_
+get_week_num(data)
+
+
+# data가 timedelata일 경우
+from datetime import datetime
+
+date = datetime.now().isocalendar()
+print(date)
+print(date[0])
+print(f'First is year, {date[0]}.')
+print(date[1])
+print(f'Second is week number, {date[1]}.')
+print(date[2])
+print(f'Last is weekday, {date[2]}.\n')
