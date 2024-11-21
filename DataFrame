@@ -115,7 +115,7 @@ test.fillna(1)
 
 
 # columns check
-# test.columns, value_counts, describe, info
+# test.columns, value_counts, describe, info, unique
 
 
 # 데이터 특정 컬럼 내 조건 출력
