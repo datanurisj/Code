@@ -120,3 +120,6 @@ test.fillna(1)
 
 # 데이터 특정 컬럼 내 조건 출력
 df[df['weeks'].str.contains('04')]
+
+# 데이터 특정 컬램 내 조건 query 출력
+df.query('weeks > 1')    # weeks 내 숫자가 1 초과 데이터만 출력
