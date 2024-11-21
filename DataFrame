@@ -123,3 +123,20 @@ df[df['weeks'].str.contains('04')]
 
 # 데이터 특정 컬램 내 조건 query 출력
 df.query('weeks > 1')    # weeks 내 숫자가 1 초과 데이터만 출력
+
+
+# 컬럼 내 null값 확인
+df[['weeks']].isnull().sum()
+
+null_df = df[df['weeks'].isnull()]
+print(null_df)
+
+
+# weeks 컬럼에서 int64 타입인 값들만 필터링
+ex_df = pd.to_numeric(df['weeks'], errors='coerce')
+
+# 숫자형 데이터만 있는 행 출력
+ex_filtered = df[ex_df.notnull()]
+
+# 해당 컬럼의 인덱스 정보 출력
+ex_filtered[['weeks', 'days']].index
