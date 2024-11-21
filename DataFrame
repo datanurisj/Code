@@ -116,3 +116,7 @@ test.fillna(1)
 
 # columns check
 # test.columns, value_counts, describe
+
+
+# 데이터 특정 컬럼 내 조건 출력
+df[df['weeks'].str.contains('04')]
