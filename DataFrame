@@ -140,3 +140,13 @@ ex_filtered = df[ex_df.notnull()]
 
 # 해당 컬럼의 인덱스 정보 출력
 ex_filtered[['weeks', 'days']].index
+
+
+# 데이터 병합
+new_data = pd.concat([df1,df2])
+
+# 원하는 데이터의 그룹화 및 합계 계산
+grouped_df = df.groupby('ARRAPT_3')['CNU'].sum().reset_index()
+
+# 데이터 내림차순순
+sorted_df = grouped_df.sort_values(by='CNU', ascending=False)
