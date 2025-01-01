@@ -181,3 +181,22 @@ class MyFileWriter():
 
 with MyFileWriter('./testfile3.txt', 'w') as f:
     f.write('Context Manager Test3\nContextlib Test3')
+
+
+# 코드 시간 계산
+import time
+
+class ExcuteTimer(object):
+    def __init__(self, msg):
+        self._msg = msg
+        
+    def __enter__(self):
+        self._start = time.monotonic()  # 시간을 숫자형태로 가져와서 start 변수에 저장
+        return self._start
+    
+    def __exit__(self, exc_type, exc_value, exc_traceback):
+        if exc_type:
+            print("Logging exception {}".format((exc_type, exc_value, exc_traceback)))
+        else:
+            print('{} : {} s'.format(self._msg, time.monotonic() - self._start))
+        return True  # 엄격하게 명시할때 사용
