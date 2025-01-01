@@ -161,3 +161,23 @@ print(date[1])
 print(f'Second is week number, {date[1]}.')
 print(date[2])
 print(f'Last is weekday, {date[2]}.\n')
+
+
+# 파일 불러오는 클래스 생성 및 사용
+class MyFileWriter():
+    def __init__(self, file_name, method):
+        print('MyFileWriter started : __init__')
+        self.file_obj = open(file_name, method)
+        
+    def __enter__(self):
+        print('MyFileWriter started : __enter__')
+        return self.file_obj
+    
+    def __exit__(self, exc_type, value, trace_back):
+        print('MyFileWriter started : __exit__')
+        if exc_type:
+            print('Logging exception {}'.format((exc_type, value, trace_back)))
+        self.file_obj.close()
+
+with MyFileWriter('./testfile3.txt', 'w') as f:
+    f.write('Context Manager Test3\nContextlib Test3')
