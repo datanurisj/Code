@@ -21,7 +21,7 @@ json_normalize
 df.to_excel("경로설정\\파일이름.xlsx")
 
 # df.to_csv        # 데이터 프레임을 csv로 저장
-df.to_csv("경로설정//파일이름.csv")
+df.to_csv("경로설정//파일이름.csv", index=False)
 
 # dict to Dataframe
 new_df = pd.DataFrame(name_size_dict, index=[0])
@@ -150,3 +150,24 @@ grouped_df = df.groupby('ARRAPT_3')['CNU'].sum().reset_index()
 
 # 데이터 내림차순순
 sorted_df = grouped_df.sort_values(by='CNU', ascending=False)
+
+# 해당 컬럼 다음 컬럼 다음 컬럼 value 갖고 오기
+def new_col(df):
+    df['Master_carrier'] = df['CARRIER_CODE'].fillna(
+        df['IATA_CARRIER_CODE'].fillna(
+            df['ICAO_CARRIER_CODE'].fillna(df['OAG_CARRIER_CODE'])
+        )
+    )
+    return df
+
+def new_col_name(df):
+    df['Master_carrier_name'] = df['CARRIER_NAME'].fillna(
+        df['ICAO_CARRIER_NAME'].fillna(df['OAG_CARRIER_NAME'])
+    )
+    return df
+
+
+# 출력 시 전체 컬럼이 보이도록 설정
+pd.set_option('display.max_columns', None) 
+# 출력 시 전체 열과 데이터 프레임의 폭을 조정
+pd.set_option('display.expand_frame_repr', False)
