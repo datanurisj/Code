@@ -18,6 +18,7 @@ test = pd.read_csv(path)
 # 인코딩
 encoding = "utf-8" # euc-kr, default 값 설정
 encoding = "cp949" # 한글이 깨질경우 사용
+encoding = "utf-8-sig' # 를 추천
 
 
 # re
