@@ -200,3 +200,11 @@ class ExcuteTimer(object):
         else:
             print('{} : {} s'.format(self._msg, time.monotonic() - self._start))
         return True  # 엄격하게 명시할때 사용
+
+# 사용 예시
+with ExcuteTimer('Start! job') as v:
+    print('Received start monotonic1 : {}'.format(v))
+    # Excute job
+    for i in range(10000000):
+        pass
+    raise Exception('Raise! Exception!!') # 강제로 발생
